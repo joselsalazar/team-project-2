@@ -21,6 +21,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+app.use(express.static("public"));
+
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({}).then(function() {
