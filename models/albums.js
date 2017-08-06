@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Todo = sequelize.define("Albums", {
+  var Album = sequelize.define("Album", {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -15,5 +15,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return Todo;
+  return Album;
 };
