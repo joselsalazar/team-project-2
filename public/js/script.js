@@ -1,7 +1,10 @@
 $(document).ready(function() {
-	var newAlbum = $("input.search-bar");
+	var newTerm = $("input.search-term");
+	var newArtist = $("input.search-artist");
 	var albumInfo = $("#album-info");
 	var Spotify = require('node-spotify-api');
+
+	$(document).on("submit", "#album-search", addAlbums);
 
 	var albums = [];
 
@@ -18,11 +21,15 @@ $(document).ready(function() {
 				var rowsAdded = [];
 				rowsAdded.push(
 					`<div class="artist-block">
+						<img src=${data.tracks.items[0].album.images[2].url}>
 						<div>${data.tracks.items[0].artists[0].name}</div>
 						<div>${data.tracks.items[0].album.name}</div>
-					</div>`
+						<div><a href=${data.tracks.items[0].album.external_urls.spotify} target="_blank">Play it Here!</a></div>
+					</div>
+					<hr>`
 				);
 				albumInfo.append(rowsAdded);
+				console.log(data);
 			}
 		});
 	}
@@ -39,13 +46,22 @@ $(document).ready(function() {
 	function displayData() {
 		albumInfo.empty();
 		for (var i = 0; i < albums.length; i++) {
-			spotifySearch(albums[i].title);
+			var albumQuery = `${albums[i].title} - ${albums[i].artist}`;
+			spotifySearch(albumQuery);
 		}
 	}
 
 	// Add Album Info
-	function addAlbums() {
-		console.log("Add New Albums!");
+	function addAlbums(event) {
+		event.preventDefault();
+		var album = {
+			title: newTerm.val().trim(),
+			artist: newArtist.val().trim()
+		};
+
+		$.post("/api/albums", album, getAlbumInfo);
+		newTerm.val("");
+		newArtist.val("");
 	}
 
 	getAlbumInfo();
