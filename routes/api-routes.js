@@ -1,13 +1,15 @@
 var db = require("../models");
+var cors = require("cors");
 
 module.exports = function(app) {
-	app.get("/api/albums", function(req, res) {
+	app.options('*', cors());
+	app.get("/api/albums", cors(), function(req, res) {
 		db.Album.findAll({}).then(function(dbAlbum) {
 			res.json(dbAlbum);
 		})
 	});
 
-	app.post("/api/albums", function(req, res) {
+	app.post("/api/albums", cors(), function(req, res) {
 		db.Album.create({
 			title: req.body.title,
 			artist: req.body.artist
@@ -16,7 +18,7 @@ module.exports = function(app) {
 		});
 	});
 
-	app.delete("/api/albums/:id", function(req, res) {
+	app.delete("/api/albums/:id", cors(), function(req, res) {
 		db.Album.destroy({
 			where: {
 				id: req.params.id
@@ -26,7 +28,7 @@ module.exports = function(app) {
 		});
 	});
 
-	app.put("/api/albums", function(req, res) {
+	app.put("/api/albums", cors(), function(req, res) {
 		db.Album.update({
 			title: req.body.title,
 			artist: req.body.artist

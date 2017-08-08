@@ -43904,7 +43904,6 @@ $(document).ready(function() {
 	function deleteAlbum(event) {
 		event.stopPropagation();
 		var id = $(this).attr("data-id");
-		console.log(id);
 		$.ajax({
 			method: "DELETE",
 			url: "/api/albums/" + id
