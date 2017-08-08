@@ -11,8 +11,8 @@ $(document).ready(function() {
 
 	function spotifySearch(album, id) {
 		var spotify = new Spotify({
-		  id: "35563073063e418aa3673cc30523cc50",
-		  secret: "f568229cd07c483d99097e09d419310e"
+		  id: "58e29f27ad1449f3a22a6485f5be2b6c",
+		  secret: "4008a3414e834ec48495c1186c149c6e"
 		});
 
 		spotify.search({ type: 'track', query: album }, function(err, data) {

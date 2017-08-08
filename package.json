@@ -22,6 +22,7 @@
     "browserify": "^14.4.0",
     "cors": "^2.8.4",
     "express": "^4.15.3",
+    "jQuery": "^1.7.4",
     "mysql2": "^1.4.0",
     "node-spotify-api": "^1.0.6",
     "requirejs": "^2.3.4",
