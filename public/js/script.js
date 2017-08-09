@@ -26,12 +26,15 @@ $(document).ready(function() {
 						<div>${data.tracks.items[0].artists[0].name}</div>
 						<div>${data.tracks.items[0].album.name}</div>
 						<div><a href=${data.tracks.items[0].album.external_urls.spotify} target="_blank">Play it Here!</a></div>
+						<audio src=${data.tracks.items[0].preview_url} controls>
+						</audio>
 						<button class="delete btn-danger" data-id=${id}>Remove</button>
 					</div>
 					<hr>`
 				);
 				albumInfo.append(rowsAdded);
 				console.log(data);
+				console.log(data.tracks.items[2].preview_url);
 			}
 		});
 	}

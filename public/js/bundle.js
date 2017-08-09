@@ -6775,8 +6775,8 @@ function _setExports(ndebug) {
 
 module.exports = _setExports(process.env.NODE_NDEBUG);
 
-}).call(this,{"isBuffer":require("../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")},require('_process'))
-},{"../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"_process":322,"assert":203,"stream":357,"util":369}],50:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js")},require('_process'))
+},{"../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"_process":322,"assert":203,"stream":357,"util":369}],50:[function(require,module,exports){
 
 /*!
  *  Copyright 2010 LearnBoost <dev@learnboost.com>
@@ -14103,8 +14103,8 @@ CombinedStream.prototype._emitError = function(err) {
   this.emit('error', err);
 };
 
-}).call(this,{"isBuffer":require("../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"delayed-stream":59,"stream":357,"util":369}],58:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"delayed-stream":59,"stream":357,"util":369}],58:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -14214,8 +14214,8 @@ function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
 
-}).call(this,{"isBuffer":require("../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":293}],59:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js":293}],59:[function(require,module,exports){
 var Stream = require('stream').Stream;
 var util = require('util');
 
@@ -17703,8 +17703,8 @@ module.exports = {
 
 };
 
-}).call(this,{"isBuffer":require("../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"./utils":92,"assert-plus":49,"crypto":246,"http":358,"jsprim":102,"sshpk":162,"util":369}],92:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"./utils":92,"assert-plus":49,"crypto":246,"http":358,"jsprim":102,"sshpk":162,"util":369}],92:[function(require,module,exports){
 // Copyright 2012 Joyent, Inc.  All rights reserved.
 
 var assert = require('assert-plus');
@@ -21031,8 +21031,8 @@ function _setExports(ndebug) {
 
 module.exports = _setExports(process.env.NODE_NDEBUG);
 
-}).call(this,{"isBuffer":require("../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")},require('_process'))
-},{"../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"_process":322,"assert":203,"stream":357,"util":369}],104:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js")},require('_process'))
+},{"../../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"_process":322,"assert":203,"stream":357,"util":369}],104:[function(require,module,exports){
 var root = require('./_root');
 
 /** Built-in value references. */
@@ -37437,8 +37437,8 @@ Key._oldVersionDetect = function (obj) {
 	return ([1, 0]);
 };
 
-}).call(this,{"isBuffer":require("../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"./algs":145,"./dhe":147,"./ed-compat":148,"./errors":149,"./fingerprint":150,"./formats/auto":151,"./formats/pem":153,"./formats/pkcs1":154,"./formats/pkcs8":155,"./formats/rfc4253":156,"./formats/ssh":158,"./formats/ssh-private":157,"./private-key":164,"./signature":165,"./utils":167,"assert-plus":168,"crypto":246}],164:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"./algs":145,"./dhe":147,"./ed-compat":148,"./errors":149,"./fingerprint":150,"./formats/auto":151,"./formats/pem":153,"./formats/pkcs1":154,"./formats/pkcs8":155,"./formats/rfc4253":156,"./formats/ssh":158,"./formats/ssh-private":157,"./private-key":164,"./signature":165,"./utils":167,"assert-plus":168,"crypto":246}],164:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2017 Joyent, Inc.
 
@@ -38459,7 +38459,7 @@ function opensshCipherInfo(cipher) {
 }).call(this,require("buffer").Buffer)
 },{"./private-key":164,"assert-plus":168,"buffer":236,"crypto":246,"jsbn":96}],168:[function(require,module,exports){
 arguments[4][103][0].apply(exports,arguments)
-},{"../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"_process":322,"assert":203,"dup":103,"stream":357,"util":369}],169:[function(require,module,exports){
+},{"../../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"_process":322,"assert":203,"dup":103,"stream":357,"util":369}],169:[function(require,module,exports){
 'use strict';
 
 var isNative = /\.node$/;
@@ -40454,30 +40454,35 @@ Store.prototype.getAllCookies = function(cb) {
 
 },{}],177:[function(require,module,exports){
 module.exports={
-  "_from": "tough-cookie@~2.3.0",
+  "_args": [
+    [
+      "tough-cookie@2.3.2",
+      "/Users/joselsalazar/Documents/team-project-2"
+    ]
+  ],
+  "_from": "tough-cookie@2.3.2",
   "_id": "tough-cookie@2.3.2",
   "_inBundle": false,
   "_integrity": "sha1-8IH3bkyFcg5sN6X6ztc3FQ2EByo=",
   "_location": "/tough-cookie",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "tough-cookie@~2.3.0",
+    "raw": "tough-cookie@2.3.2",
     "name": "tough-cookie",
     "escapedName": "tough-cookie",
-    "rawSpec": "~2.3.0",
+    "rawSpec": "2.3.2",
     "saveSpec": null,
-    "fetchSpec": "~2.3.0"
+    "fetchSpec": "2.3.2"
   },
   "_requiredBy": [
     "/request",
     "/request-promise"
   ],
   "_resolved": "https://registry.npmjs.org/tough-cookie/-/tough-cookie-2.3.2.tgz",
-  "_shasum": "f081f76e4c85720e6c37a5faced737150d84072a",
-  "_spec": "tough-cookie@~2.3.0",
-  "_where": "/home/jose/Documents/team-project-2/node_modules/request",
+  "_spec": "2.3.2",
+  "_where": "/Users/joselsalazar/Documents/team-project-2",
   "author": {
     "name": "Jeremy Stashewsky",
     "email": "jstashewsky@salesforce.com"
@@ -40485,7 +40490,6 @@ module.exports={
   "bugs": {
     "url": "https://github.com/salesforce/tough-cookie/issues"
   },
-  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Alexander Savin"
@@ -40509,7 +40513,6 @@ module.exports={
   "dependencies": {
     "punycode": "^1.4.1"
   },
-  "deprecated": false,
   "description": "RFC6265 Cookies and Cookie Jar for node.js",
   "devDependencies": {
     "async": "^1.4.2",
@@ -43845,7 +43848,7 @@ WError.prototype.cause = function we_cause(c)
 
 },{"assert-plus":186,"core-util-is":58,"extsprintf":64,"util":369}],186:[function(require,module,exports){
 arguments[4][103][0].apply(exports,arguments)
-},{"../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"_process":322,"assert":203,"dup":103,"stream":357,"util":369}],187:[function(require,module,exports){
+},{"../../../../../../../../usr/local/lib/node_modules/browserify/node_modules/is-buffer/index.js":293,"_process":322,"assert":203,"dup":103,"stream":357,"util":369}],187:[function(require,module,exports){
 $(document).ready(function() {
 	var newTerm = $("input.search-term");
 	var newArtist = $("input.search-artist");
@@ -43859,8 +43862,8 @@ $(document).ready(function() {
 
 	function spotifySearch(album, id) {
 		var spotify = new Spotify({
-		  id: "35563073063e418aa3673cc30523cc50",
-		  secret: "f568229cd07c483d99097e09d419310e"
+		  id: "58e29f27ad1449f3a22a6485f5be2b6c",
+		  secret: "4008a3414e834ec48495c1186c149c6e"
 		});
 
 		spotify.search({ type: 'track', query: album }, function(err, data) {
@@ -43874,12 +43877,15 @@ $(document).ready(function() {
 						<div>${data.tracks.items[0].artists[0].name}</div>
 						<div>${data.tracks.items[0].album.name}</div>
 						<div><a href=${data.tracks.items[0].album.external_urls.spotify} target="_blank">Play it Here!</a></div>
+						<audio src=${data.tracks.items[0].preview_url} controls>
+						</audio>
 						<button class="delete btn-danger" data-id=${id}>Remove</button>
 					</div>
 					<hr>`
 				);
 				albumInfo.append(rowsAdded);
 				console.log(data);
+				console.log(data.tracks.items[2].preview_url);
 			}
 		});
 	}
@@ -46324,8 +46330,7 @@ function fromByteArray (uint8) {
 
   var Buffer;
   try {
-    // Obfuscate that we require Buffer, to reduce size
-    Buffer = require('buf' + 'fer').Buffer;
+    Buffer = require('buffer').Buffer;
   } catch (e) {
   }
 
@@ -49701,7 +49706,7 @@ function fromByteArray (uint8) {
   };
 })(typeof module === 'undefined' || module, this);
 
-},{}],206:[function(require,module,exports){
+},{"buffer":207}],206:[function(require,module,exports){
 var r;
 
 module.exports = function rand(len) {
@@ -59853,7 +59858,7 @@ module.exports={
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
   "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
   "_spec": "elliptic@^6.0.0",
-  "_where": "/usr/lib/node_modules/browserify/node_modules/browserify-sign",
+  "_where": "/usr/local/lib/node_modules/browserify/node_modules/browserify-sign",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
