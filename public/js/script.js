@@ -54,7 +54,7 @@ $(document).ready(function() {
 			artist: newArtist.val().trim()
 		};
 
-		$.get("/api/albums", album, getAlbumInfo);
+		$.post("/api/albums", album, getAlbumInfo);
 		newTerm.val("");
 		newArtist.val("");
 	}
