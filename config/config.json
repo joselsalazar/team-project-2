@@ -2,14 +2,14 @@
   "development": {
     "username": "root",
     "password": "J3susThis5uCKS",
-    "database": "album_db",
+    "database": "albums_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "J3susThis5uCKS",
-    "database": "album_db",
+    "database": "albums_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
