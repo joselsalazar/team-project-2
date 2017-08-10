@@ -20,8 +20,19 @@ $(document).ready(function() {
 	function displayData() {
 		albumInfo.empty();
 		for (var i = 0; i < albums.length; i++) {
-			var albumQuery = `${albums[i].title} - ${albums[i].artist}`;
+			var albumQuery = `${albums[i].album} - ${albums[i].artist}`;
 			console.log(albumQuery);
+
+			$("#album-info").append(
+				`
+					<tr>
+						<td><img src=${albums[i].albumArt}></td>
+						<td>${albums[i].artist}</td>
+						<td>${albums[i].album}</td>
+						<td><audio src=${albums[i].listen} controls></td>
+					</tr>
+				`
+			);
 		}
 	}
 
@@ -42,7 +53,7 @@ $(document).ready(function() {
 			artist: newArtist.val().trim()
 		};
 
-		$.post("/api/albums", album, getAlbumInfo);
+		$.get("/api/albums", album, getAlbumInfo);
 		newTerm.val("");
 		newArtist.val("");
 	}
