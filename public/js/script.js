@@ -30,6 +30,7 @@ $(document).ready(function() {
 						<td>${albums[i].artist}</td>
 						<td>${albums[i].album}</td>
 						<td><audio src=${albums[i].listen} controls></td>
+						<td><button class="delete" data-id=${albums[i].id}>X</button></td>
 					</tr>
 				`
 			);
