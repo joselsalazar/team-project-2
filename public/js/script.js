@@ -16,6 +16,21 @@ $(document).ready(function() {
 		});
 	}
 
+	// Generate Purchase Button
+	function getBuyButton() {
+		var title = "shakira"
+		var query = "http://itunes.apple.com/search?term=" + title;
+
+		$.ajax({
+			url: query,
+			method: "GET"
+		}).done(function(response) {
+			console.log(response.results[0].artistName);
+		});
+	}
+
+	getBuyButton();
+
 	// Display Info From Database
 	function displayData() {
 		albumInfo.empty();
@@ -37,6 +52,7 @@ $(document).ready(function() {
 		}
 	}
 
+	// Delete Functionality
 	function deleteAlbum(event) {
 		event.stopPropagation();
 		var id = $(this).attr("data-id");
