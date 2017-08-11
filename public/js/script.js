@@ -8,12 +8,16 @@ $(document).ready(function() {
 
 	var albums = [];
 
+	function dataTable() {
+		$('#example').DataTable();
+	}
+
 	// Get Album Info
 	function getAlbumInfo() {
 		$.get("/api/albums", function(data) {
 			albums = data;
 			displayData();
-		});
+		}).done(dataTable);
 	}
 
 	// Display Info From Database
@@ -27,9 +31,9 @@ $(document).ready(function() {
 				`
 					<tr>
 					  <td>
-					    <span class="tooltip" onmouseover="tooltip.pop(this, '#uniqueid-album-art', {position:0, cssClass:'no-padding'})"><img src=${albums[i].albumArt} alt="" class="img-small"></span> 
+					    <span class="tooltip" onmouseover="tooltip.pop(this, '#uniqueid-album-art-${albums[i].id}', {position:0, cssClass:'no-padding'})"><img src=${albums[i].albumArt} alt="" class="img-small"></span> 
 					    <div style="display:none;">
-					        <div id="uniqueid-album-art">
+					        <div id="uniqueid-album-art-${albums[i].id}">
 					            <img src=${albums[i].albumArt} alt='' class='img-large'>
 					        </div>
 					    </div>
@@ -69,5 +73,4 @@ $(document).ready(function() {
 	}
 
 	getAlbumInfo();
-	$('#example').DataTable();
 });
