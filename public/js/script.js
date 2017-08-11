@@ -20,20 +20,31 @@ $(document).ready(function() {
 	function displayData() {
 		albumInfo.empty();
 		for (var i = 0; i < albums.length; i++) {
-			var albumQuery = `${albums[i].album} - ${albums[i].artist}`;
-			console.log(albumQuery);
-
-			$("#album-info").append(
+			var generateRows = 
 				`
 					<tr>
-						<td><img src=${albums[i].albumArt}></td>
-						<td>${albums[i].artist}</td>
-						<td>${albums[i].album}</td>
-						<td><audio src=${albums[i].listen} controls></td>
-						<td><button class="delete" data-id=${albums[i].id}>X</button></td>
-					</tr>
-				`
-			);
+					  <td>
+					    <span class="tooltip" onmouseover="tooltip.pop(this, '#albumart-${albums[i].id}', {position:0, cssClass:'no-padding'})"><img src=${albums[i].albumArt} alt="" class="img-small"></span> 
+					    <div style="display:none;">
+					        <div id="#albumart-${albums[i].id}">
+					            <img src=${albums[i].albumArt} alt='' class='img-large'>
+					        </div>
+					    </div>
+					  </td>
+					  <td>${albums[i].artist}</td>
+					  <td>${albums[i].album}</td>
+					  <td>
+					  	<span class="tooltip2" onmouseover="tooltip.pop(this, '#songlisten-${albums[i].id}', {sticky:true, position:0, cssClass:'no-padding'})"><button class="listen btn btn-default"><i class="fa fa-headphones" aria-hidden="true"></i></button></span> 
+					    <div style="display:none;">
+					        <div id="#songlisten-${albums[i].id}">
+					            <audio src="https://p.scdn.co/mp3-preview/658627c1c2fb5f9a89ce556ead028b7cebd297c6?cid=58e29f27ad1449f3a22a6485f5be2b6c" controls>
+					        </div>
+					    </div>
+					  </td>
+					  <td><button class="delete btn btn-default" data-id=${albums[i].id}><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+					</tr>	
+				`;
+			albumInfo.append(generateRows);
 		}
 	}
 
