@@ -37,7 +37,7 @@ $(document).ready(function() {
 					  	<span class="tooltip2" onmouseover="tooltip.pop(this, '#songlisten-${albums[i].id}', {sticky:true, position:0, cssClass:'no-padding'})"><button class="listen btn btn-default"><i class="fa fa-headphones" aria-hidden="true"></i></button></span> 
 					    <div style="display:none;">
 					        <div id="#songlisten-${albums[i].id}">
-					            <audio src="https://p.scdn.co/mp3-preview/658627c1c2fb5f9a89ce556ead028b7cebd297c6?cid=58e29f27ad1449f3a22a6485f5be2b6c" controls>
+					            <audio src=${albums[i].listen} controls>
 					        </div>
 					    </div>
 					  </td>
