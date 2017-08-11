@@ -20,13 +20,16 @@ $(document).ready(function() {
 	function displayData() {
 		albumInfo.empty();
 		for (var i = 0; i < albums.length; i++) {
-			var generateRows = 
+			var albumQuery = `${albums[i].album} - ${albums[i].artist}`;
+			console.log(albumQuery);
+
+			albumInfo.append(
 				`
 					<tr>
 					  <td>
-					    <span class="tooltip" onmouseover="tooltip.pop(this, '#albumart-${albums[i].id}', {position:0, cssClass:'no-padding'})"><img src=${albums[i].albumArt} alt="" class="img-small"></span> 
+					    <span class="tooltip" onmouseover="tooltip.pop(this, '#uniqueid-album-art', {position:0, cssClass:'no-padding'})"><img src=${albums[i].albumArt} alt="" class="img-small"></span> 
 					    <div style="display:none;">
-					        <div id="#albumart-${albums[i].id}">
+					        <div id="uniqueid-album-art">
 					            <img src=${albums[i].albumArt} alt='' class='img-large'>
 					        </div>
 					    </div>
@@ -34,17 +37,12 @@ $(document).ready(function() {
 					  <td>${albums[i].artist}</td>
 					  <td>${albums[i].album}</td>
 					  <td>
-					  	<span class="tooltip2" onmouseover="tooltip.pop(this, '#songlisten-${albums[i].id}', {sticky:true, position:0, cssClass:'no-padding'})"><button class="listen btn btn-default"><i class="fa fa-headphones" aria-hidden="true"></i></button></span> 
-					    <div style="display:none;">
-					        <div id="#songlisten-${albums[i].id}">
-					            <audio src=${albums[i].listen} controls>
-					        </div>
-					    </div>
+					    	<audio src=${albums[i].listen} controls>  
 					  </td>
 					  <td><button class="delete btn btn-default" data-id=${albums[i].id}><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
 					</tr>	
-				`;
-			albumInfo.append(generateRows);
+				`
+			);
 		}
 	}
 
@@ -71,4 +69,5 @@ $(document).ready(function() {
 	}
 
 	getAlbumInfo();
+	$('#example').DataTable();
 });
